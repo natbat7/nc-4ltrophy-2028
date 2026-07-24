@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Budget — N&C 4L Trophy 2028</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Literata:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">N&C 2028</div>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="projet.html">Le Projet</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="contact.html" class="active">Contact & Budget</a>
+  </div>
+</nav>
+
+<header class="hero small">
+  <div class="hero-content">
+    <span class="stamp">Transparence & Échange</span>
+    <h1>Contact & <span class="accent">Budget</span></h1>
+  </div>
+</header>
+
+<div class="route-wrap">
+  
+  <!-- 1. SECTION BUDGET PRÉVISIONNEL -->
+  <section id="budget">
+    <div class="km"><span class="km-dot"></span><span class="km-label">Km 6000 — Le Budget Prévisionnel</span></div>
+    <div class="section-inner" style="max-width:100%;">
+      <p class="eyebrow">Transparence financière</p>
+      <h2 class="title">Où va l'argent de notre aventure ?</h2>
+      <p>Participer au 4L Trophy demande une organisation rigoureuse. Voici le détail estimé de notre budget global pour mener à bien notre périple de la Bretagne au Sahara.</p>
+      
+
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px;">
+        
+        <!-- Carte 1 : Inscription -->
+        <div style="background: #1d2229; border: 1px solid #3a4454; border-radius: 8px; padding: 24px;">
+          <h3 style="font-family: 'Oswald', sans-serif; font-size: 20px; color: #c9a063; margin-bottom: 10px;">🚗 Inscription & Organisation</h3>
+          <p style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">3 500 €</p>
+          <p style="color: #b0aba0; font-size: 14px;">Frais d'engagement auprès de l'organisation, hébergements bivouacs, ravitaillement, assistance mécanique et médicale sur tout le parcours.</p>
+        </div>
+
+        <!-- Carte 2 : Véhicule -->
+        <div style="background: #1d2229; border: 1px solid #3a4454; border-radius: 8px; padding: 24px;">
+          <h3 style="font-family: 'Oswald', sans-serif; font-size: 20px; color: #c9a063; margin-bottom: 10px;">🛠️ Achat & Préparation 4L</h3>
+          <p style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">3 000 €</p>
+          <p style="color: #b0aba0; font-size: 14px;">Achat de la Renault 4, pièces détachées, renforts de caisse, plaques de protection, révision moteur, pneumatiques tout-terrain et équipements de sécurité obligatoires.</p>
+        </div>
+
+        <!-- Carte 3 : Frais de route -->
+        <div style="background: #1d2229; border: 1px solid #3a4454; border-radius: 8px; padding: 24px;">
+          <h3 style="font-family: 'Oswald', sans-serif; font-size: 20px; color: #c9a063; margin-bottom: 10px;">⛽ Essence, Péages & Divers</h3>
+          <p style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">2 500 €</p>
+          <p style="color: #b0aba0; font-size: 14px;">Carburant pour les 6 000 km aller-retour entre la Bretagne et le Maroc, péages autoroutiers, assurance spécifique raid et équipements personnels.</p>
+        </div>
+
+      </div>
+
+      <div style="background: #191e25; border-left: 4px solid #c8402e; padding: 20px; margin-top: 30px; border-radius: 0 8px 8px 0;">
+        <p style="font-size: 16px; margin: 0;"><strong>Budget Total Estimé : ~9 000 € à 10 000 €</strong> — Financé en partie par nos emplacements publicitaires sur la voiture, nos fonds propres et des actions solidaires.</p>
+      </div>
+
+
+
+<!-- BARRE DE PROGRESSION BUDGET -->
+      <div style="background: #1d2229; border: 1px solid #3a4454; border-radius: 8px; padding: 40px 30px 20px 30px; margin-bottom: 40px; text-align: center;">
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 20px; text-transform: uppercase; margin-bottom: 40px; color: #f3efe4;">L'avancée de notre cagnotte</h3>
+        
+        <!-- La route / jauge -->
+        <div style="position: relative; width: 100%; height: 8px; background: #12151b; border-radius: 4px; margin-bottom: 20px;">
+          
+          <!-- Le remplissage rouge -->
+          <div id="progress-fill" style="position: absolute; top: 0; left: 0; height: 100%; background: #c8402e; border-radius: 4px; width: 0%; transition: width 1.5s ease-in-out;"></div>
+          
+          <!-- Ta petite voiture dessinée -->
+          <div id="progress-car" style="position: absolute; top: -30px; left: 0%; transform: translateX(-50%); transition: left 1.5s ease-in-out;">
+            <!-- C'est ici que tu mettras le nom de ton futur dessin ! -->
+            <img src="voiture-dessin.png" alt="Notre 4L" style="height: 40px; display: block;">
+          </div>
+          
+          <!-- Ligne d'arrivée (Drapeau) -->
+          <div style="position: absolute; top: -25px; right: 0; font-size: 24px;">🏁</div>
+        </div>
+
+        <!-- Les montants -->
+        <div style="display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 14px;">
+          <span style="color: #c8402e; font-weight: bold;"><span id="montant-actuel">0</span> € récoltés</span>
+          <span style="color: #b0aba0;">Objectif : <span id="montant-objectif">10000</span> €</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 2. SECTION CONTACT -->
+  <section id="contact">
+    <div class="km"><span class="km-dot"></span><span class="km-label">Km 6500 — Point d'Arrivée</span></div>
+    <div class="section-inner" style="max-width:100%;">
+      <p class="eyebrow">Échangeons</p>
+      <h2 class="title">Contactez Nathan & Clément</h2>
+      <p>Une question sur notre projet, envie de devenir partenaire ou simplement de nous donner un coup de pouce ? Écrivez-nous directement !</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 30px;">
+        
+        <!-- Coordonnées directes -->
+        <div style="background: #1d2229; border: 1px solid #3a4454; border-radius: 8px; padding: 30px;">
+          <h3 style="font-family: 'Oswald', sans-serif; font-size: 22px; text-transform: uppercase; margin-bottom: 20px; color: #c9a063;">Nos Coordonnées</h3>
+          
+          <p style="margin-bottom: 15px;"><strong>📍 Point de départ :</strong> Bretagne, France</p>
+          <p style="margin-bottom: 15px;"><strong>✉️ E-mail direct :</strong> <a href="mailto:cestbeau2rever@gmail.com" style="color: #c8402e; text-decoration: none;">cestbeau2rever@gmail.com</a></p>
+          <p style="margin-bottom: 15px;"><strong>🏁 Objectif :</strong> 4L Trophy 2028</p>
+
+          <hr style="border: none; border-top: 1px solid #3a4454; margin: 25px 0;">
+
+          <h4 style="font-family: 'Oswald', sans-serif; font-size: 18px; margin-bottom: 10px;">Suivez notre préparation :</h4>
+          <p style="color: #b0aba0; font-size: 14px;">Bientôt disponibles sur nos réseaux sociaux pour suivre chaque étape de la restauration de notre 4L !</p>
+        </div>
+
+        <!-- Formulaire de contact direct -->
+        <div style="background: #1d2229; border: 1px solid #3a4454; border-radius: 8px; padding: 30px;">
+          <h3 style="font-family: 'Oswald', sans-serif; font-size: 22px; text-transform: uppercase; margin-bottom: 20px;">Envoyez-nous un message</h3>
+          
+          <form onsubmit="sendContactEmail(event)">
+            <label style="display:block; margin-bottom:8px; font-family:'IBM Plex Mono'; font-size:13px; text-transform:uppercase;">Votre Nom / Entreprise :</label>
+            <input type="text" id="contact-name" required style="width: 100%; padding: 12px; background: #12151b; color: #f3efe4; border: 1px solid #8b8579; border-radius: 4px; margin-bottom: 15px;">
+
+            <label style="display:block; margin-bottom:8px; font-family:'IBM Plex Mono'; font-size:13px; text-transform:uppercase;">Votre Adresse E-mail :</label>
+            <input type="email" id="contact-email" required style="width: 100%; padding: 12px; background: #12151b; color: #f3efe4; border: 1px solid #8b8579; border-radius: 4px; margin-bottom: 15px;">
+
+            <label style="display:block; margin-bottom:8px; font-family:'IBM Plex Mono'; font-size:13px; text-transform:uppercase;">Votre Message :</label>
+            <textarea id="contact-message" rows="4" required style="width: 100%; padding: 12px; background: #12151b; color: #f3efe4; border: 1px solid #8b8579; border-radius: 4px; margin-bottom: 20px; font-family: inherit;"></textarea>
+
+            <button type="submit" class="btn primary" style="background: #c8402e; color: #f3efe4; padding: 14px 26px; border: none; text-transform: uppercase; font-family: 'Oswald'; cursor: pointer; border-radius: 2px; width: 100%;">Envoyer le message</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>Nathan & Clément — 4L Trophy 2028 · Bretagne → Sahara</footer>
+
+<script>
+  // Script spécifique pour le formulaire de contact
+  function sendContactEmail(event) {
+    // Empêche le rechargement de la page
+    event.preventDefault();
+    
+    // Récupère les infos du formulaire
+    const name = document.getElementById('contact-name').value;
+    const email = document.getElementById('contact-email').value;
+    const message = document.getElementById('contact-message').value;
+    
+    // Prépare l'e-mail mailto
+    const emailTo = "cestbeau2rever@gmail.com";
+    const subject = encodeURIComponent("Message de contact (Site 4L) - " + name);
+    const body = encodeURIComponent(
+      "Bonjour Nathan et Clément,\n\n" +
+      "Vous avez reçu un nouveau message depuis le site web :\n\n" +
+      "Nom / Entreprise : " + name + "\n" +
+      "E-mail de contact : " + email + "\n\n" +
+      "Message :\n" + message + "\n\n" +
+      "Cordialement"
+    );
+    
+    // Ouvre la boîte mail du client
+    window.location.href = "mailto:" + emailTo + "?subject=" + subject + "&body=" + body;
+  }
+</script>
+
+</body>
+</html>

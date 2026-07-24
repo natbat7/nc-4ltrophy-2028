@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsors — N&C 4L Trophy 2028</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Literata:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    #configurateur-container {
+      width: 100%;
+      height: 60vh;
+      background: var(--ink-2);
+      border: 1px solid var(--sand-deep);
+      border-radius: 8px;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">N&C 2028</div>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="projet.html">Le Projet</a>
+    <a href="sponsors.html" class="active">Sponsors</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<header class="hero small">
+  <div class="hero-content">
+    <span class="stamp">Partenariat</span>
+    <h1>Espaces <span class="accent">Sponsors</span></h1>
+  </div>
+</header>
+
+<div class="route-wrap">
+  
+  <!-- 1. LA ZONE 3D -->
+  <section id="configurateur">
+    <div class="km"><span class="km-dot"></span><span class="km-label">Km 5000 — Testez votre logo</span></div>
+    <div class="section-inner" style="max-width:100%;">
+      <p class="eyebrow">Configurateur Interactif</p>
+      <h2 class="title">Projetez-vous sur notre future 4L</h2>
+      <p>Utilisez notre simulateur 3D interactif pour uploader votre logo et visualiser votre futur emplacement publicitaire en direct.</p>
+      
+      <div id="configurateur-container">
+        <iframe 
+          src="https://natbat7.github.io/modele4L/" 
+          width="100%" 
+          height="100%" 
+          style="border: none; border-radius: 8px;"
+          title="Configurateur 3D 4L Trophy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- 2. LA ZONE DE SÉLECTION DU PLAN DE MARQUAGE -->
+  <section id="tarifs-sponsors">
+    <div class="km"><span class="km-dot"></span><span class="km-label">Km 5200 — Le Plan de Marquage</span></div>
+    <div class="section-inner" style="max-width:100%;">
+      <p class="eyebrow">Schéma officiel</p>
+      <h2 class="title">Repérez votre emplacement sur la 4L</h2>
+      <p>Choisissez votre numéro de zone sur le schéma technique ci-dessous pour préparer votre dossier de partenariat.</p>
+
+
+
+<!-- Bloc d'information Fiscalité / Comptabilité -->
+      <div style="max-width: 650px; margin: 0 auto 30px auto; background: #191e25; border-left: 4px solid #c9a063; padding: 20px; border-radius: 0 8px 8px 0;">
+        <h3 style="font-family: 'Oswald', sans-serif; font-size: 18px; color: #c9a063; margin-bottom: 10px; text-transform: uppercase;">💡 Avantage fiscal pour votre entreprise</h3>
+        <p style="font-size: 14px; color: #b0aba0; margin-bottom: 10px; line-height: 1.6;">
+          <strong>Le saviez-vous ?</strong> L'achat d'un encart publicitaire sur notre 4L est une prestation de parrainage (sponsoring). Nous vous fournirons une facture émise par notre association.
+        </p>
+        <p style="font-size: 14px; color: #b0aba0; margin: 0; line-height: 1.6;">
+          Cette facture est assimilée à une dépense de communication (Compte 623). Elle passe donc dans vos charges d'exploitation et <strong>vient directement diminuer votre bénéfice imposable</strong>. Un excellent moyen d'allier visibilité, soutien solidaire et optimisation financière !
+        </p>
+      </div>      
+      
+
+
+<!-- Schéma de la voiture -->
+      <div style="max-width: 650px; margin: 30px auto; background: #1d2229; padding: 15px; border: 1px solid #3a4454; border-radius: 8px; text-align: center;">
+        <img src="schema-voiture.jpg" alt="Schéma technique 4L Trophy" style="width: 100%; display: block; border-radius: 4px;">
+      </div>
+
+      <!-- Le formulaire de sélection par numéro -->
+      <div id="sponsor-form-area" style="margin-top: 40px; padding: 24px; background: #1d2229; border: 1px solid #8a6a3a; border-radius: 8px; max-width: 650px; margin-left: auto; margin-right: auto;">
+        <h3 style="font-size: 22px; font-family: 'Oswald', sans-serif; text-transform: uppercase; margin-bottom: 20px;">Réserver votre emplacement</h3>
+        
+        <label style="display:block; margin-bottom:10px; font-family:'IBM Plex Mono'; font-size:14px; text-transform:uppercase;">Sélectionnez votre numéro de zone :</label>
+        <select id="zone-select" style="width: 100%; padding: 12px; background: #12151b; color: #f3efe4; border: 1px solid #8b8579; border-radius: 4px; font-size: 16px; margin-bottom: 20px;">
+          <option value="">-- Choisissez un emplacement (Zones 1 à 29) --</option>
+          <option value="Zone 1 - Capot Centre (1100€)">Zone 1 - Capot Centre (1 100 €)</option>
+          <option value="Zone 2 & 3 - Capot Latéral (700€)">Zones 2 & 3 - Capot Latéral (700 €)</option>
+          <option value="Zone 4 - Haut de pare-brise (400€)">Zone 4 - Haut de pare-brise (400 €)</option>
+          <option value="Zones 5 à 14 - Flanc Droit">Flanc Droit - Zones 5 à 14 (De 200 € à 700 €)</option>
+          <option value="Zones 15 à 24 - Flanc Gauche">Flanc Gauche - Zones 15 à 24 (De 200 € à 700 €)</option>
+          <option value="Zone 25 - Lunette Arrière (400€)">Zone 25 - Lunette Arrière (400 €)</option>
+          <option value="Zone 26 - Hayon Central (700€)">Zone 26 - Hayon Central (700 €)</option>
+          <option value="Zone 27 - Coffre Bas (500€)">Zone 27 - Coffre Bas (500 €)</option>
+          <option value="Zone 28 - Pare-chocs Arrière (300€)">Zone 28 - Pare-chocs Arrière (300 €)</option>
+          <option value="Zone 29 - Toit (1300€)">Zone 29 - Toit (1300€)</option>
+        </select>
+
+        <a href="#" class="btn primary" style="display: inline-block; background: #c8402e; color: #f3efe4; padding: 14px 26px; text-transform: uppercase; font-family: 'Oswald'; text-decoration: none; border-radius: 2px;" onclick="generateDossier(event)">Générer ma demande de partenariat</a>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>Nathan & Clément — 4L Trophy 2028 · Bretagne → Sahara</footer>
+
+<!-- LE SCRIPT JAVASCRIPT CORRIGÉ -->
+<script>
+  function generateDossier(event) {
+    if (event) event.preventDefault(); 
+    
+    const select = document.getElementById('zone-select');
+    const chosenZone = select.value;
+    
+    if(!chosenZone) {
+      alert("Veuillez sélectionner un emplacement dans la liste déroulante avant de générer votre demande.");
+      return;
+    }
+    
+    const emailTo = "cestbeau2rever@gmail.com"; 
+    const subject = encodeURIComponent("Demande de Sponsoring 4L Trophy - " + chosenZone);
+    
+    // Le texte du mail pré-rempli pour votre boîte
+    const body = encodeURIComponent(
+      "Bonjour Nathan et Clément,\n\n" +
+      "Je souhaite réserver l'emplacement suivant pour notre entreprise :\n" +
+      "📌 " + chosenZone + "\n\n" +
+      "⚠️ [Rappel : N'oubliez pas d'attacher votre logo en pièce jointe de cet e-mail]\n\n" +
+      "Pouvez-vous nous recontacter pour m'envoyer le dossier officiel et valider notre partenariat ?\n\n" +
+      "Cordialement,\n" +
+      "[Nom de votre entreprise / Contact]"
+    );
+    
+    window.location.href = "mailto:" + emailTo + "?subject=" + subject + "&body=" + body;
+  }
+</script>
+
+</body>
+</html>
