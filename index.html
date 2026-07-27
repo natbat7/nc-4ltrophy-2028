@@ -14,6 +14,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Literata:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- COMPTE À REBOURS -->
+<div style="background: #1d2229; border: 1px solid #c9a063; padding: 20px; border-radius: 8px; text-align: center; margin: 40px auto; max-width: 600px; color: #f3efe4; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+    <h3 style="font-family: 'Oswald', sans-serif; color: #c9a063; margin-top: 0; text-transform: uppercase; font-size: 20px; letter-spacing: 1px;">⏳ Le grand départ dans :</h3>
+    <div style="display: flex; justify-content: center; gap: 20px; font-family: 'Oswald', sans-serif; font-size: 32px; color: #c8402e;">
+        <div><span id="jours">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Jours</span></div>
+        <div>:</div>
+        <div><span id="heures">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Heures</span></div>
+        <div>:</div>
+        <div><span id="minutes">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Min</span></div>
+        <div>:</div>
+        <div><span id="secondes">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Sec</span></div>
+    </div>
+</div>
+
+<script>
+    // Date cible du départ (Mois en anglais: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec)
+    const dateDepart = new Date("Feb 15, 2028 12:00:00").getTime();
+
+    setInterval(function() {
+        const maintenant = new Date().getTime();
+        const difference = dateDepart - maintenant;
+
+        if (difference > 0) {
+            document.getElementById("jours").innerHTML = Math.floor(difference / (1000 * 60 * 60 * 24));
+            document.getElementById("heures").innerHTML = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerHTML = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("secondes").innerHTML = Math.floor((difference % (1000 * 60)) / 1000);
+        } else {
+            // Message affiché quand le compte à rebours est terminé
+            document.getElementById("jours").innerHTML = "00";
+        }
+    }, 1000);
+</script>
 </head>
 <body>
 
