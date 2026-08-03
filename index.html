@@ -4,31 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil — N&C 4L Trophy 2028</title>
+  
   <!-- Balises Open Graph pour les réseaux sociaux et SMS -->
   <meta property="og:title" content="N&C 4L Trophy 2028 — Devenez Partenaire !">
   <meta property="og:description" content="Découvrez le projet de Nathan et Clément pour le 4L Trophy 2028. Aventure, solidarité et sponsoring : embarquez avec nous dans le désert !">
   <meta property="og:image" content="https://natbat7.github.io/nc-4ltrophy-2028/logo_cb2r.png">
   <meta property="og:url" content="https://natbat7.github.io/nc-4ltrophy-2028/">
+  
   <link rel="icon" type="image/png" href="logo_cb2r.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Literata:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- COMPTE À REBOURS -->
-<div style="background: #1d2229; border: 1px solid #c9a063; padding: 20px; border-radius: 8px; text-align: center; margin: 40px auto; max-width: 600px; color: #f3efe4; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-    <h3 style="font-family: 'Oswald', sans-serif; color: #c9a063; margin-top: 0; text-transform: uppercase; font-size: 20px; letter-spacing: 1px;">⏳ Le grand départ dans :</h3>
-    <div style="display: flex; justify-content: center; gap: 20px; font-family: 'Oswald', sans-serif; font-size: 32px; color: #c8402e;">
-        <div><span id="jours">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Jours</span></div>
-        <div>:</div>
-        <div><span id="heures">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Heures</span></div>
-        <div>:</div>
-        <div><span id="minutes">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Min</span></div>
-        <div>:</div>
-        <div><span id="secondes">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Sec</span></div>
-    </div>
-</div>
-
-
 </head>
 <body>
 
@@ -59,28 +46,44 @@
       <div><span class="num">1</span><span class="lbl">Renault 4L à préparer</span></div>
     </div>
   </div>
-
-
 </header>
-  <script>
-    // Date cible du départ (Mois en anglais: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec)
-    const dateDepart = new Date("Feb 15, 2028 12:00:00").getTime();
 
-    setInterval(function() {
-        const maintenant = new Date().getTime();
-        const difference = dateDepart - maintenant;
+<!-- ======================================================== -->
+<!-- COMPTE À REBOURS -->
+<!-- ======================================================== -->
+<div style="background: #1d2229; border: 1px solid #c9a063; padding: 20px; border-radius: 8px; text-align: center; margin: 30px auto 10px auto; max-width: 600px; color: #f3efe4; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+  <h3 style="font-family: 'Oswald', sans-serif; color: #c9a063; margin-top: 0; text-transform: uppercase; font-size: 20px; letter-spacing: 1px;">⏳ Le grand départ dans :</h3>
+  <div style="display: flex; justify-content: center; gap: 20px; font-family: 'Oswald', sans-serif; font-size: 32px; color: #c8402e;">
+    <div><span id="jours">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Jours</span></div>
+    <div>:</div>
+    <div><span id="heures">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Heures</span></div>
+    <div>:</div>
+    <div><span id="minutes">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Min</span></div>
+    <div>:</div>
+    <div><span id="secondes">00</span><span style="font-size: 12px; display: block; color: #b0aba0; text-transform: uppercase;">Sec</span></div>
+  </div>
+</div>
 
-        if (difference > 0) {
-            document.getElementById("jours").innerHTML = Math.floor(difference / (1000 * 60 * 60 * 24));
-            document.getElementById("heures").innerHTML = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("minutes").innerHTML = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById("secondes").innerHTML = Math.floor((difference % (1000 * 60)) / 1000);
-        } else {
-            // Message affiché quand le compte à rebours est terminé
-            document.getElementById("jours").innerHTML = "00";
-        }
-    }, 1000);
+<script>
+  // Date cible du départ (15 Février 2028 à 12h00)
+  const dateDepart = new Date("Feb 15, 2028 12:00:00").getTime();
+
+  setInterval(function() {
+    const maintenant = new Date().getTime();
+    const difference = dateDepart - maintenant;
+
+    if (difference > 0) {
+      document.getElementById("jours").innerHTML = Math.floor(difference / (1000 * 60 * 60 * 24));
+      document.getElementById("heures").innerHTML = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById("minutes").innerHTML = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      document.getElementById("secondes").innerHTML = Math.floor((difference % (1000 * 60)) / 1000);
+    } else {
+      document.getElementById("jours").innerHTML = "00";
+    }
+  }, 1000);
 </script>
+<!-- ======================================================== -->
+
 <div class="route-wrap">
   <section id="histoire">
     <div class="km"><span class="km-dot"></span><span class="km-label">Km 000 — Saint-Malo</span></div>
@@ -90,14 +93,15 @@
       <p>Depuis nos premiers pas, nous avons absolument tout partagé. Les grands jeux comme les petites bêtises, les moments d'entraide infaillible comme les embrouilles mémorables qui ne duraient jamais bien longtemps. En réalité, plus que des cousins, nous avons grandi exactement comme deux frères.</p>
       <p>Nous lancer ensemble dans l'aventure du 4L Trophy aujourd'hui, c'est tout simplement la suite logique de notre histoire. Nous savons que cette complicité forgée au fil des années sera notre meilleur moteur pour surmonter les galères mécaniques, garder le sourire dans le désert et mener à bien cette belle mission solidaire !</p>
       
-<div class="frame-row">
+      <div class="frame-row">
         <div class="frame">
           <img src="photo-enfants.jpg" alt="Nathan et Clément enfants">
         </div>
         <div class="frame">
           <img src="photo-aujourdhui.jpg" alt="Nathan et Clément aujourd'hui">
         </div>
-      </div>    </div>
+      </div>
+    </div>
   </section>
 
   <hr class="divider">
@@ -125,6 +129,7 @@
     </div>
   </section>
 </div>
+
 <!-- RÉSEAUX SOCIAUX -->
 <div style="text-align: center; margin: 50px 0;">
   <h3 style="font-family: 'Oswald', sans-serif; color: #f3efe4; font-size: 24px; margin-bottom: 20px;">Suivez notre préparation en direct :</h3>
@@ -137,6 +142,7 @@
     🎵 TikTok
   </a>
 </div>
+
 <footer>Nathan & Clément — 4L Trophy 2028 · Bretagne → Sahara</footer>
 </body>
 </html>
