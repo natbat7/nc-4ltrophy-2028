@@ -28,25 +28,7 @@
     </div>
 </div>
 
-<script>
-    // Date cible du départ (Mois en anglais: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec)
-    const dateDepart = new Date("Feb 15, 2028 12:00:00").getTime();
 
-    setInterval(function() {
-        const maintenant = new Date().getTime();
-        const difference = dateDepart - maintenant;
-
-        if (difference > 0) {
-            document.getElementById("jours").innerHTML = Math.floor(difference / (1000 * 60 * 60 * 24));
-            document.getElementById("heures").innerHTML = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("minutes").innerHTML = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById("secondes").innerHTML = Math.floor((difference % (1000 * 60)) / 1000);
-        } else {
-            // Message affiché quand le compte à rebours est terminé
-            document.getElementById("jours").innerHTML = "00";
-        }
-    }, 1000);
-</script>
 </head>
 <body>
 
@@ -77,6 +59,26 @@
       <div><span class="num">1</span><span class="lbl">Renault 4L à préparer</span></div>
     </div>
   </div>
+
+  <script>
+    // Date cible du départ (Mois en anglais: Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec)
+    const dateDepart = new Date("Feb 15, 2028 12:00:00").getTime();
+
+    setInterval(function() {
+        const maintenant = new Date().getTime();
+        const difference = dateDepart - maintenant;
+
+        if (difference > 0) {
+            document.getElementById("jours").innerHTML = Math.floor(difference / (1000 * 60 * 60 * 24));
+            document.getElementById("heures").innerHTML = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerHTML = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("secondes").innerHTML = Math.floor((difference % (1000 * 60)) / 1000);
+        } else {
+            // Message affiché quand le compte à rebours est terminé
+            document.getElementById("jours").innerHTML = "00";
+        }
+    }, 1000);
+</script>
 </header>
 
 <div class="route-wrap">
